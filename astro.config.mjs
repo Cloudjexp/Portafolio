@@ -4,8 +4,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://cloudjexp.github.io",
-  base: "/Portafolio",
+  site: "https://cloudjex.dev",
 
   vite: {
     plugins: [tailwindcss()]
