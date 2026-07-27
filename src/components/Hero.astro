@@ -1,0 +1,51 @@
+---
+import TerminalCard from "./TerminalCard.astro";
+---
+
+
+<section class="mx-auto mt-36 flex max-w-6xl flex-col items-center gap-16 px-6 lg:flex-row lg:justify-between">
+
+    <!-- Columna izquierda -->
+    <div class="max-w-2xl text-center lg:text-left">
+
+        <h1
+            class="text-6xl md:text-7xl font-black leading-tight
+            bg-gradient-to-r
+            from-text
+            via-white
+            to-accent
+            bg-clip-text
+            text-transparent"
+        >
+            Construyendo software
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-xl text-subtext">
+            Desarrollo software, exploro Linux y disfruto construir herramientas
+            y proyectos de código abierto.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                🐧 Linux
+            </span>
+
+            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                🦀 Rust
+            </span>
+
+            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                🐳 Docker
+            </span>
+
+            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                🚀 Astro
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- Aquí iráTerminalCard -->
+    <TerminalCard />
+</section>

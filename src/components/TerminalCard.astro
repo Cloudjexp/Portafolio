@@ -1,0 +1,25 @@
+---
+import TerminalAnimation from "./terminal/TerminalAnimation";
+---
+
+<div
+    class="w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl shadow-black/20 transition-all duration-500 hover:-translate-y-2 hover:border-accent/30 hover:shadow-accent/10"
+>
+    <!-- Header -->
+    <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
+        <div class="flex gap-2">
+            <div class="h-3 w-3 rounded-full bg-red-400"></div>
+            <div class="h-3 w-3 rounded-full bg-yellow-400"></div>
+            <div class="h-3 w-3 rounded-full bg-green-400"></div>
+        </div>
+
+        <span class="text-sm text-subtext">
+            kitty
+        </span>
+    </div>
+
+    <!-- Cuerpo -->
+    <div class="p-6 font-mono text-sm">
+        <TerminalAnimation client:load />
+    </div>
+</div>

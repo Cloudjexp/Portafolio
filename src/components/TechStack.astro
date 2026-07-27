@@ -1,0 +1,57 @@
+---
+import TechCard from "./TechCard.astro";
+
+import tux from "../assets/icons/tux.png";
+import docker from "../assets/icons/docker.png";
+import git from "../assets/icons/git.png";
+import github from "../assets/icons/github.svg";
+import mariadb from "../assets/icons/mariadb.png";
+import neovim from "../assets/icons/neovim.svg";
+import rust from "../assets/icons/rust.png";
+const stack = [
+    {
+        name: "Linux",
+        icon: tux.src,
+    },
+    {
+        name: "Docker",
+        icon: docker.src,
+    },
+    {
+        name: "Git",
+        icon: git.src,
+    },
+    {
+        name: "GitHub",
+        icon: github.src,
+    },
+    {
+        name: "MariaDB",
+        icon: mariadb.src,
+    },
+    {
+        name: "Neovim",
+        icon: neovim.src,
+    },
+    {
+        name: "Rust",
+        icon: rust.src,
+    },
+];
+---
+<section class="mx-auto mt-32 max-w-6xl px-8">
+    <h2 class="mb-10 text-center text-4xl font-bold">
+        Tecnologías
+    </h2>
+
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+    {
+        stack.map((tech) => (
+            <TechCard
+                name={tech.name}
+                icon={tech.icon}
+            />
+        ))
+    }
+</div>
+</section>

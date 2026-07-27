@@ -1,0 +1,44 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+import novaCli from "../assets/projects/nova-cli.png";
+
+const projects = [
+    {
+        title: "CloudJex",
+        description: "Mi portafolio desarrollado con Astro y Tailwind CSS.",
+        //image: cloudjex.src,
+        github: "",
+        tech: ["Astro", "Tailwind CSS", "TypeScript"],
+    },
+    {
+        title: "Nova CLI",
+        description: "Una herramienta de línea de comandos para Linux.",
+        image: novaCli.src,
+        github: "https://github.com/Cloudjexp/NOVA-CLI",
+        tech: ["Rust", "Linux", "CLI"],
+    },
+];
+---
+
+<section
+    id="proyectos"
+    class="mx-auto mt-24 max-w-6xl px-6">
+    <h2 class="mb-10 text-center text-4xl font-bold">
+        Proyectos
+    </h2>
+    
+    <div class="grid gap-8 md:grid-cols-2">
+        {
+            projects.map((project) => (
+                <ProjectCard
+    title={project.title}
+    description={project.description}
+    image={project.image}
+    github={project.github}
+    tech={project.tech}
+/>
+            ))
+        }
+    </div>
+</section>

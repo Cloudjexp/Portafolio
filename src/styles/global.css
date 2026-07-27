@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+    --color-base: #1e1e2e;
+    --color-surface: #313244;
+    --color-overlay: #45475a;
+    --color-text: #cdd6f4;
+    --color-subtext: #a6adc8;
+    --color-accent: #89b4fa;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(137, 180, 250, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(203, 166, 247, 0.05),
+            transparent 40%
+        ),
+        #1e1e2e;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 15% 15%, rgba(137,180,250,.10), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(203,166,247,.08), transparent 35%),
+        radial-gradient(circle at 50% 90%, rgba(245,194,231,.06), transparent 40%);
+
+    z-index: -1;
+}
