@@ -1,4 +1,6 @@
 ---
+import GithubIcon from "../assets/icons/github.svg";
+
 interface Props {
     title: string;
     description: string;
@@ -11,15 +13,17 @@ const { title, description, github, tech, image } = Astro.props;
 ---
 
 <div
-    class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-2xl"
+    class="overflow-hidden rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-accent/50 hover:shadow-2xl"
 >
     {
         image ? (
-            <img
-                src={image}
-                alt={title}
-                class="mb-6 h-56 w-full rounded-2xl object-cover"
-            />
+            <div class="mb-6 overflow-hidden rounded-2xl border border-white/5">
+                <img
+                    src={image}
+                    alt={title}
+                    class="h-56 w-full object-cover transition-transform duration-500 hover:scale-[1.03" 
+                    />
+            </div>
         ) : (
             <div
                 class="mb-6 flex h-56 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 via-base to-purple-500/20"
@@ -28,29 +32,26 @@ const { title, description, github, tech, image } = Astro.props;
                     <h3 class="text-4xl font-bold">{title}</h3>
 
                     <p class="mt-2 text-subtext">
-                        Personal Portfolio
+                        Portafolio Personal
                     </p>
                 </div>
             </div>
         )
     }
 
-    <!-- Título -->
     <h3 class="text-2xl font-bold">
         {title}
     </h3>
 
-    <!-- Descripción -->
     <p class="mt-3 text-subtext">
         {description}
     </p>
 
-    <!-- Tecnologías -->
     <div class="mt-6 flex flex-wrap gap-2">
         {
             tech.map((item) => (
                 <span
-                    class="rounded-full bg-base px-3 py-1 text-sm text-accent"
+                    class="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-sm text-accent transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent hover:text-base"
                 >
                     {item}
                 </span>
@@ -58,12 +59,14 @@ const { title, description, github, tech, image } = Astro.props;
         }
     </div>
 
-    <!-- Botón -->
     <a
         href={github}
         target="_blank"
-        class="mt-6 inline-flex items-center rounded-full bg-accent/10 px-5 py-2 font-medium text-accent transition-all duration-300 hover:bg-accent hover:text-base"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-5 py-2.5 font-medium text-accent transition-all duration-300 hover:border-accent hover:text-base"
     >
-        GitHub →
+
+    <img src={GithubIcon.src} alt="" class="h-5 w-5" />    
+    <span>GitHub</span>
     </a>
 </div>
