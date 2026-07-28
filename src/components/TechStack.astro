@@ -1,57 +1,76 @@
 ---
 import TechCard from "./TechCard.astro";
 
-import tux from "../assets/icons/tux.png";
 import docker from "../assets/icons/docker.png";
 import git from "../assets/icons/git.png";
-import github from "../assets/icons/github.svg";
 import mariadb from "../assets/icons/mariadb.png";
-import neovim from "../assets/icons/neovim.svg";
+import astroIcon from "../assets/icons/astro.svg";
 import rust from "../assets/icons/rust.png";
-const stack = [
-    {
-        name: "Linux",
-        icon: tux.src,
-    },
+import typescript from "../assets/icons/typescript.png";
+
+type Level = "Básico" | "Intermedio" | "Avanzado";
+
+interface Tech {
+    name: string;
+    icon: string;
+    level: Level;
+    }
+
+const stack: Tech[] = [
     {
         name: "Docker",
         icon: docker.src,
+        level: "Básico",
     },
     {
         name: "Git",
         icon: git.src,
-    },
-    {
-        name: "GitHub",
-        icon: github.src,
+        level: "Básico",
+        
     },
     {
         name: "MariaDB",
         icon: mariadb.src,
-    },
-    {
-        name: "Neovim",
-        icon: neovim.src,
+        level: "Básico",
+        
     },
     {
         name: "Rust",
         icon: rust.src,
+        level: "Básico",
+        
     },
+    {
+        name: "Astro",
+        icon: astroIcon.src,
+        level: "Básico",
+    },
+    {
+        name: "TypeScript",
+        icon: typescript.src,
+        level: "Básico",
+    }
 ];
 ---
-<section class="mx-auto mt-32 max-w-6xl px-8">
-    <h2 class="mb-10 text-center text-4xl font-bold">
-        Tecnologías
-    </h2>
 
-    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-    {
-        stack.map((tech) => (
+<section class="mx-auto mt-32 max-w-6xl px-6">
+    <div class="mb-12 text-center">
+        <h2 class="text-4xl font-bold">
+            Stack Tecnológico
+        </h2>
+
+        <p class="mt-3 text-subtext">
+            Herramientas y tecnologías que utilizo en mis proyectos.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {stack.map((tech) => (
             <TechCard
                 name={tech.name}
                 icon={tech.icon}
+                level={tech.level}
             />
-        ))
-    }
-</div>
+        ))}
+    </div>
 </section>

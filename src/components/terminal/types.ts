@@ -10,4 +10,5 @@ export type LineType =
 export interface ScriptLine {
     type: LineType;
     text?: string;
+    typing?: boolean;
 }
