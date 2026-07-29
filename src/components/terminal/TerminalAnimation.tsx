@@ -13,7 +13,6 @@ export default function TerminalAnimation() {
     useEffect(() => {
         if (!current) return;
 
-        // Las líneas en blanco aparecen inmediatamente
         if (current.type === "blank") {
             setFinishedLines(prev => [...prev, current]);
             setLineIndex(prev => prev + 1);
@@ -56,9 +55,24 @@ export default function TerminalAnimation() {
 
     const finished = lineIndex >= script.length;
 
+    useEffect(() => {
+        if(!finished) return;
+
+        const timer = setTimeout(() => {
+            setFinishedLines([]);
+            setLineIndex(0);
+            setCharIndex(0);
+        }, 700);
+
+        return () => clearTimeout(timer);
+    }, [finished]);
+
+    const MAX_VISIBLE_LINES = 10;
+    const visibleLines = finishedLines.slice(-MAX_VISIBLE_LINES); 
+
     return (
     <div className="space-y-2 font-mono text-sm">
-        {finishedLines.map((line, index) => (
+        {visibleLines.map((line, index) => (
             <TerminalLine
                 key={index}
                 line={line}

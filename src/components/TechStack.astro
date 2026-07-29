@@ -7,6 +7,8 @@ import mariadb from "../assets/icons/mariadb.png";
 import astroIcon from "../assets/icons/astro.svg";
 import rust from "../assets/icons/rust.png";
 import typescript from "../assets/icons/typescript.png";
+import java from "../assets/icons/java.png";
+import linux from "../assets/icons/tux.png";
 
 type Level = "Básico" | "Intermedio" | "Avanzado";
 
@@ -31,8 +33,13 @@ const stack: Tech[] = [
     {
         name: "MariaDB",
         icon: mariadb.src,
-        level: "Básico",
+        level: "Intermedio",
         
+    },
+    {
+        name: "Java",
+        icon: java.src,
+        level: "Intermedio",
     },
     {
         name: "Rust",
@@ -43,12 +50,17 @@ const stack: Tech[] = [
     {
         name: "Astro",
         icon: astroIcon.src,
-        level: "Básico",
+        level: "Intermedio",
     },
     {
         name: "TypeScript",
         icon: typescript.src,
         level: "Básico",
+    },
+    {
+        name: "Linux",
+        icon: linux.src,
+        level: "Intermedio"
     }
 ];
 ---

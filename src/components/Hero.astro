@@ -1,21 +1,21 @@
 ---
 import TerminalCard from "./TerminalCard.astro";
+
+import LinuxIcon from "../assets/icons/tux.png";
+import RustIcon from "../assets/icons/rust.png";
+import DockerIcon from "../assets/icons/docker.png";
+import AstroIcon from "../assets/icons/astro.svg";
 ---
 
+<section
+    id="top"
+    class="scroll-mt-32 mx-auto mt-36 flex max-w-6xl flex-col items-center gap-16 px-6 lg:flex-row lg:justify-between lg:gap-20"
+>
 
-<section class="mx-auto mt-36 flex max-w-6xl flex-col items-center gap-16 px-6 lg:flex-row lg:justify-between">
-
-    <!-- Columna izquierda -->
     <div class="max-w-2xl text-center lg:text-left">
 
         <h1
-            class="text-6xl md:text-7xl font-black leading-tight
-            bg-gradient-to-r
-            from-text
-            via-white
-            to-accent
-            bg-clip-text
-            text-transparent"
+            class="bg-gradient-to-r from-text via-white to-accent bg-clip-text text-6xl font-black leading-tight text-transparent md:text-7xl"
         >
             Construyendo software
         </h1>
@@ -26,26 +26,47 @@ import TerminalCard from "./TerminalCard.astro";
         </p>
 
         <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
-                🐧 Linux
+
+            <span class="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                <img
+                    src={LinuxIcon.src}
+                    alt="Linux"
+                    class="h-5 w-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                />
+                <span>Linux</span>
             </span>
 
-            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
-                🦀 Rust
+            <span class="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                <img
+                    src={RustIcon.src}
+                    alt="Rust"
+                    class="h-5 w-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                />
+                <span>Rust</span>
             </span>
 
-            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
-                🐳 Docker
+            <span class="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                <img
+                    src={DockerIcon.src}
+                    alt="Docker"
+                    class="h-5 w-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                />
+                <span>Docker</span>
             </span>
 
-            <span class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
-                🚀 Astro
+            <span class="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-accent/10">
+                <img
+                    src={AstroIcon.src}
+                    alt="Astro"
+                    class="h-5 w-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                />
+                <span>Astro</span>
             </span>
+
         </div>
 
     </div>
 
-
-    <!-- Aquí iráTerminalCard -->
     <TerminalCard />
+
 </section>

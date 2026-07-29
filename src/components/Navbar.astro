@@ -1,21 +1,44 @@
-<nav class="sticky top-0 z-50">
+<nav class="sticky top-0 z-50" aria-label="Navegación principal">
     <div
-        class="mx-auto mt-5 flex w-11/12 max-w-6xl items-center justify-between rounded-3xl border border-white/10 ring-1 ring-white/5 bg-white/5 px-8 py-4 backdrop-blur-2xl shadow-2xl shadow-black/20"
+        class="mx-auto mt-5 flex w-11/12 max-w-6xl items-center justify-between rounded-3xl border border-white/10 bg-white/5 px-8 py-4 shadow-2xl shadow-black/20 ring-1 ring-white/5 backdrop-blur-2xl"
     >
         <a
             href="#top"
-            class="text-3xl font-black tracking-tight text-accent"
+            class="text-3xl font-black tracking-tight transition-colors duration-300 hover:text-accent"
         >
-            Cloud<span class="text-text">Jex</span>
+            <span class="text-accent">Cloud</span><span class="text-text">Jex</span>
         </a>
 
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-6">
+
+            <a
+                href="#proyectos"
+                class="transition-colors duration-300 hover:text-accent"
+            >
+                Proyectos
+            </a>
+
+            <a
+                href="#stack"
+                class="transition-colors duration-300 hover:text-accent"
+            >
+                Stack
+            </a>
+
+            <a
+                href="#about"
+                class="transition-colors duration-300 hover:text-accent"
+            >
+                Sobre mí
+            </a>
+
             <a
                 href="#contacto"
                 class="rounded-xl px-3 py-2 transition-all duration-300 hover:bg-white/5 hover:text-accent"
             >
                 Contacto
             </a>
+
         </div>
     </div>
 </nav>

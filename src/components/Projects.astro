@@ -7,7 +7,7 @@ const projects = [
     {
         title: "CloudJex",
         description: "Mi portafolio desarrollado con Astro y Tailwind CSS.",
-        //image: cloudjex.src,
+        // image: cloudjex.src,
         github: "https://github.com/Cloudjexp/Portafolio",
         tech: ["Astro", "Tailwind CSS", "TypeScript"],
     },
@@ -23,22 +23,21 @@ const projects = [
 
 <section
     id="proyectos"
-    class="mx-auto mt-24 max-w-6xl px-6">
-    <h2 class="mb-10 text-center text-4xl font-bold">
+    class="scroll-mt-32 mx-auto mt-24 max-w-6xl px-6"
+>
+    <h2 class="mb-12 text-center text-4xl font-bold">
         Proyectos
     </h2>
-    
+
     <div class="grid gap-8 md:grid-cols-2">
-        {
-            projects.map((project) => (
-                <ProjectCard
-    title={project.title}
-    description={project.description}
-    image={project.image}
-    github={project.github}
-    tech={project.tech}
-/>
-            ))
-        }
+        {projects.map((project) => (
+            <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                github={project.github}
+                tech={project.tech}
+            />
+        ))}
     </div>
 </section>

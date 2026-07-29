@@ -1,62 +1,15 @@
----
-import InfoCard from "./InfoCard.astro";
-
-const interests = [
-    {
-        icon: "🐧",
-        title: "Linux",
-        description: "Mi sistema principal para estudiar, desarrollar y experimentar.",
-    },
-    {
-        icon: "🦀",
-        title: "Rust",
-        description: "Aprendiendo a construir software rápido, seguro y moderno.",
-    },
-    {
-        icon: "🐳",
-        title: "Docker",
-        description: "Contenedores para desarrollar y administrar servicios.",
-    },
-    {
-        icon: "🏠",
-        title: "Homelab",
-        description: "Servidor personal para aprender redes, Linux y DevOps.",
-    },
-];
----
-
 <section class="mx-auto mt-40 max-w-6xl px-6">
-
-    <div class="max-w-3xl">
-
+    <div class="max-w-4xl">
         <h2 class="text-4xl font-bold text-text">
             Sobre mí
         </h2>
 
-        <p class="mt-6 text-lg leading-relaxed text-subtext">
-            Hola, soy Lesther
+        <p class="mt-6 text-lg leading-8 text-subtext md:text-xl">
+            Soy estudiante de Ingeniería en Sistemas con interés en el desarrollo backend, Linux y el software de código abierto. Disfruto crear proyectos personales para aprender nuevas tecnologías y fortalecer mis habilidades como desarrollador.
         </p>
 
-        <p class="mt-4 leading-relaxed text-subtext">
-            Soy estudiante de Ingeniería en Sistemas. Me interesa Linux, el desarrollo con Rust y construir herramientas que me ayuden a aprender y automatizar tareas.
-        </p>
-
-        <p class="mt-4 leading-relaxed text-subtext">
-            Disfruto experimentar con servidores, software de código abierto y proyectos personales mientras sigo mejorando como desarrollador.
+        <p class="mt-4 text-lg leading-8 text-subtext md:text-xl">
+            Mi objetivo es seguir creciendo mediante la práctica, construyendo aplicaciones y herramientas que me permitan adquirir experiencia y enfrentar nuevos desafíos.
         </p>
     </div>
-
-    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        
-        {
-        interests.map((interest) => (
-            <InfoCard
-                icon={interest.icon}
-                title={interest.title}
-                description={interest.description}
-            />
-        ))
-        }
-    </div>
-
 </section>

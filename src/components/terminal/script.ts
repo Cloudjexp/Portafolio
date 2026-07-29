@@ -4,78 +4,121 @@ export const script: ScriptLine[] = [
     {
         type: "boot",
         text: "Booting CloudJex...",
-        typing: true
+        typing: true,
     },
 
     {
         type: "success",
-        text: "✓ Loading environment"
+        text: "✓ Loading environment",
     },
 
     {
         type: "success",
-        text: "✓ Initializing shell"
+        text: "✓ Starting development tools",
     },
 
     {
-        type: "success",
-        text: "✓ Starting Nova CLI"
-    },
-
-    {
-        type: "blank"
-    },
-
-    {
-        type: "info",
-        text: "Welcome back, Lesther."
-    },
-
-    {
-        type: "blank"
+        type: "blank",
     },
 
     {
         type: "prompt",
-        text: "lesther@cloudjex ~/Projects"
+        text: "developer@cloudjex ~/projects",
     },
 
     {
         type: "command",
-        text: "nova help",
-        typing: true
-    },
-
-    {
-        type: "blank"
+        text: "git pull",
+        typing: true,
     },
 
     {
         type: "output",
-        text: "🚀 Nova CLI v1.0.0"
+        text: "Already up to date.",
+    },
+
+    {
+        type: "blank",
+    },
+
+    {
+        type: "command",
+        text: "cargo build",
+        typing: true,
     },
 
     {
         type: "output",
-        text: "CLI personal para productividad."
-    },
-
-    {
-        type: "blank"
+        text: "Compiling cloudjex...",
     },
 
     {
         type: "output",
-        text: "git      Gestión de repositorios"
+        text: "Finished in 1.18s",
+    },
+
+    {
+        type: "blank",
+    },
+
+    {
+        type: "command",
+        text: "docker compose up -d",
+        typing: true,
     },
 
     {
         type: "output",
-        text: "docker   Contenedores Docker"
+        text: "Creating network...",
     },
 
     {
         type: "output",
-        text: "rust     Desarrollo en Rust"
-    }
+        text: "Done.",
+    },
+
+    {
+        type: "blank",
+    },
+
+    {
+        type: "command",
+        text: "npm run dev",
+        typing: true,
+    },
+
+    {
+        type: "output",
+        text: "Local: http://localhost:4321",
+    },
+
+    {
+        type: "blank",
+    },
+
+    {
+        type: "command",
+        text: "git status",
+        typing: true,
+    },
+
+    {
+        type: "output",
+        text: "On branch main",
+    },
+
+    {
+        type: "output",
+        text: "Working tree clean",
+    },
+
+    {
+        type: "blank",
+    },
+
+    {
+        type: "command",
+        text: "clear",
+        typing: true,
+    },
 ];
