@@ -9,6 +9,11 @@
     --color-accent: #89b4fa;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
 body {
     background:
         radial-gradient(
